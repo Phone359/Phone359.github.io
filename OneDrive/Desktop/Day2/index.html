@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Phone Pyae Kyaw</title>
+</head>
+<body>
+    <h1>
+        Head & Tail Project
+    </h1>
+    <h2 id="coinFace">
+        HEAD
+    </h2>
+    <button id="flipBtn">
+        Flip
+    </button>
+
+</body>
+<script>
+    const coinFaceElement = document.getElementById("coinFace");
+    const flipBtnElement = document.getElementById("flipBtn");
+
+    flipBtnElement.onclick = () =>{
+    const randomNumber = Math.floor(Math.random() * 2);
+    if(randomNumber ===  0){
+        coinFaceElement.innerText = "HEAD";
+    }
+    else if(randomNumber === 1){
+        coinFaceElement.innerText = "TAIL";
+    }
+    };
+</script>
+</html>
