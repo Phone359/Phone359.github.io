@@ -3,16 +3,61 @@
 <head>
     <title>Phone Pyae Kyaw</title>
 </head>
+<style>
+    body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+    }
+    h1{
+            color: goldenrod;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-align: center;
+    }
+    img{ 
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    button{
+            margin-top: 25px;
+            padding: 15px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: goldenrod;
+            border: none;
+            border-radius: 30px;
+    }
+</style>
 <body>
-    <h1>
+    <div>
+        <h1>
+            Head & Tail Project
+        </h1>
+        <img id="coinFace" src="Image/head.jpeg" >
+        <br>
+        <button id="flipBtn">Flip</button>
+    </div>
+    <!-- <h1>
         Head & Tail Project
     </h1>
+    <img id ="coinFace" src="Image/head.jpeg" width="500">
     <h2 id="coinFace">
         HEAD
-    </h2>
-    <button id="flipBtn">
+    </h2> -->
+    <!-- <button id="flipBtn">
         Flip
-    </button>
+    </button> -->
 
 </body>
 <script>
@@ -22,10 +67,10 @@
     flipBtnElement.onclick = () =>{
     const randomNumber = Math.floor(Math.random() * 2);
     if(randomNumber ===  0){
-        coinFaceElement.innerText = "HEAD";
+        coinFaceElement.src ="Image/head.jpeg";
     }
     else if(randomNumber === 1){
-        coinFaceElement.innerText = "TAIL";
+        coinFaceElement.src = "Image/tail.jpeg"
     }
     };
 </script>
